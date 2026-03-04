@@ -1,5 +1,42 @@
-From the core dataset, we won't discard any data field.
-From the additional dataset "IMDB_ratings.csv" we will discard the fields "#" and "title". 
-The first one shows the row number used only for display and has no analytical meaning. The second one is a redundant value existing in "movies.json". Not needed for linking.
-From the additional datset "the_oscar_nominees.csv" we will discard the fields "year_film", "decade_film", "release_date" and "original_title".
-The first three fields don't provide any new valuable information for us. The last one could be used for linking movies from movies.json with the dataset but only in a very few cases, probably not useful.
+# Data Fields Justification and Exclusion Analysis
+
+## Overview
+This document provides a comprehensive analysis of data fields available in the source datasets and explains decisions regarding their inclusion or exclusion from the semantic ontology. The goal is to ensure the ontology captures semantically significant data while maintaining clarity, performance, and usability.
+
+---
+
+## Data Sources Analysis
+
+### Source 1: IMDb Movies Dataset (movies.json)
+Available Fields: _id, title, year, genre, adjusted_budget, all_actors, director, producer, gender_percent.
+
+#### Excluded Fields: None
+
+### Source 2: IMDb Actors Dataset (actors.json)
+Available Fields: _id, name, gender, movies_list.
+
+#### Excluded Fields: None
+
+### Source 3: IMDb Directors Dataset (directors.json)
+Available Fields: _id, name, gender, movies_list, first_movie, last_movie, male_count, female_count, actor_credits, actress_credits.
+
+#### Excluded Fields: None
+
+### Source 4: IMDb Producers Dataset (producers.json)
+Available Fields: _id, name, gender, movies_list, first_movie, last_movie, first_producer_movie, first_executive_movie, first_associate_movie, last_producer_movie, last_executive_movie, last_associate_movie, male_count, female_count, actor_credits, actress_credits.
+
+#### Excluded Fields: None
+
+### Source 5: IMDb Ratings Dataset (IMDb_ratings.csv)
+Available Fields: #, titleId, title, averageRating, numVotes.
+
+#### Excluded Fields: #, title.
+
+Reasons: The first one shows the row number used only for display and has no analytical meaning. The second one is a redundant value existing in "movies.json" and is not needed for linking.
+
+### Source 6: Academy Awards Dataset (the_oscar_nominees.csv)
+Available Fields: ceremony, film, category, name, year, year_ceremony, winner, year_film, decade_film, release_date, original_title.
+
+#### Excluded Fields: year_film, decade_film, release_date, original_title.
+
+Reasons: The first three fields don't provide any new valuable information for us. The last one could be used for linking movies between movies.json and this dataset but only in a very few cases; probably not useful.
