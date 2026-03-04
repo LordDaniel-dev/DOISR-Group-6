@@ -1,0 +1,82 @@
+# Use Cases for the IMDb Movies & Academy Awards Semantic Resources
+
+---
+
+## Use Case 1: Gender Diversity Analysis in Film Industry
+
+### Description
+Film industry stakeholders, researchers and other organizations need to analyze gender diversity across the film industry at scale. This includes understanding representation both in front of and behind the camera.
+
+### Goals
+- Evaluate gender representation in specific movies and across time periods
+- Track trends in female representation as actors, directors, and producers
+- Identify patterns in how gender diversity correlates with award recognition
+- Support data-driven discussions about inclusivity in cinema
+
+### Key Requirements Enabled
+- R9: Calculate gender percentage of actors in a given movie
+- R14: Retrieve actor gender information for diversity metrics
+- R18: Analyze director gender to assess female representation in leadership roles
+- R27: Evaluate producer gender to understand women's roles in production
+- R21, R22, R30, R31: Count male/female pronouns in biographies to supplement demographic data
+
+### Example Queries
+- "What percentage of the cast in Movie X is female?"
+- "How many female directors have won Academy Awards in the last 10 years?"
+- "Which producers have the most films with balanced gender representation?"
+- "Has non-binary representation among film industry increased over time?"
+
+---
+
+## Use Case 2: Comprehensive Career Tracking for Entertainment Professionals
+
+### Description
+Agents, career analysts, and entertainment professionals need complete career trajectories and filmography data for actors, directors, and producers. This enables portfolio analysis, career planning, and talent management decisions.
+
+### Business Goals
+- Compile complete filmography across different roles and genres
+- Track career progression and longevity
+- Identify professional growth patterns and specializations
+- Support talent recruitment and management decisions
+
+### Key Requirements Enabled
+- R13, R16, R25: Retrieve names of actors, directors, and producers
+- R15: Access complete filmography for any actor (movies they participated in)
+- R17: Access directorial work (all movies directed by a specific director)
+- R26: Access production work (all movies produced by a specific producer)
+- R19, R20, R28, R29: Identify first and last movie for career span analysis
+- R23, R24, R32, R33: Determine if professionals have credits in multiple roles
+
+### Example Queries
+- "Show me all movies directed by Director X, sorted by year"
+- "How many films has Producer Y worked on across different roles (producer, executive, associate)?"
+- "What is the career span of Actor Z? (from first to last film)"
+- "Which professionals have worked both as directors and actors?"
+
+---
+
+## Use Case 3: Academy Awards Analysis and Predictive Insights
+
+### Description
+Film industry analysts, award strategists, and entertainment journalists require detailed information about Academy Awards nominations and wins across history. This enables temporal analysis, trend identification, and insights into award-winning patterns.
+
+### Business Goals
+- Analyze historical patterns in Academy Awards nominations and wins
+- Identify which film characteristics correlate with award recognition
+- Track professionals' award success rates and categories
+- Support award season predictions and strategy discussions
+
+### Key Requirements Enabled
+- R37: Catalog all Academy Award ceremonies with ceremony numbers and years
+- R38: Identify all movies nominated across all ceremonies
+- R39: Retrieve complete list of professionals (actors, directors, producers) nominated for awards
+- R40: Enumerate all award categories to enable category-specific analysis
+- R41: Access ceremony years for temporal trend analysis
+- R42: Determine winners vs. nominees for success rate calculations
+- R1-R4, R11-R12: Link award data back to movies and their metadata
+
+### Example Queries
+- "Which movies released in year Y were nominated for Best Picture?"
+- "How many times has Director X been nominated? How many times won?"
+- "What are the most common genres among Best Picture winners?"
+- "Which professionals received nominations in the 88th Academy Awards ceremony and who won?"
