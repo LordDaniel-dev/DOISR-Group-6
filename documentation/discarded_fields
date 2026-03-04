@@ -1,1 +1,5 @@
-
+From the core dataset, we won't discard any data field.
+From the additional dataset "IMDB_ratings.csv" we will discard the fields "#" and "title". 
+The first one shows the row number used only for display and has no analytical meaning. The second one is a redundant value existing in "movies.json". Not needed for linking.
+From the additional datset "the_oscar_nominees.csv" we will discard the fields "year_film", "decade_film", "release_date" and "original_title".
+The first three fields don't provide any new valuable information for us. The last one could be used for linking movies from movies.json with the dataset but only in a very few cases, probably not useful.
