@@ -1,2 +1,2 @@
 # DOISR-FAIR-open-data
-Group project for the signature DOISR
+Group project for the subject DOISR
