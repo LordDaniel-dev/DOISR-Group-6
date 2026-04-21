@@ -37,6 +37,8 @@ Reasons: The first one shows the row number used only for display and has no ana
 ### Source 6: Academy Awards Dataset (the_oscar_nominees.csv)
 Available Fields: ceremony, film, category, name, year, year_ceremony, winner, year_film, decade_film, release_date, original_title.
 
+Extra Field: Nominee - It is the identifier we came up with for representing a class for nominee using some fields from above isntead of only having the class Ceremony.
+
 #### Excluded Fields: year_film, decade_film, release_date, original_title.
 
-Reasons: The first three fields don't provide any new valuable information for us. The last one could be used for linking movies between movies.json and this dataset but only in a very few cases; probably not useful.
+Reasons: The first three fields don't provide any new valuable information for us, we can extract the same information better from the others datasets. The last one could be used for linking movies between movies.json and this dataset but only in a very few cases; probably not useful.
