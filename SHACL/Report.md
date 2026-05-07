@@ -1,6 +1,6 @@
 For the following command to evaluate the data:
 
-pyshacl -s shapes.ttl ejemplo.jsonld -df json-ld
+pyshacl -s shapes.ttl correcto.jsonld -df json-ld
 
 We recieve a positive evaluation result:
 
@@ -32,3 +32,9 @@ Constraint Violation in MinCountConstraintComponent (http://www.w3.org/ns/shacl#
         Focus Node: ex:director1
         Result Path: :hasActressCredits
         Message: Less than 1 values on ex:director1->:hasActressCredits
+
+And when we make the necessary changes to the data file (giving boolean values to hasActorCredits and hasActressCredits and making hasLastMovieYear >= hasFirstMovieYear) we get:
+
+pyshacl -s shapes.ttl incorrecto2.ttl
+Validation Report
+Conforms: True
