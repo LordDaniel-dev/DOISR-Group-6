@@ -1,0 +1,14 @@
+{
+  "@context": {
+    "ex": "http://example.org/",
+    "schema": "http://schema.org/",
+    "hasName": "ex:hasName",
+    "hasFirstMovieYear": "ex:hasFirstMovieYear",
+    "hasLastMovieYear": "ex:hasLastMovieYear"
+  },
+  "@id": "ex:director1",
+  "@type": "ex:Director",
+  "hasName": "Vinicius del Toro",
+  "hasFirstMovieYear": 2020,
+  "hasLastMovieYear": 2010
+}
