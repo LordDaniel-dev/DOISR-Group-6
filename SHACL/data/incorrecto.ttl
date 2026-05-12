@@ -1,8 +1,0 @@
-@prefix ns0: <http://example.org/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://example.org/director1>
-  a <http://example.org/Director> ;
-  ns0:hasFirstMovieYear 2020 ;
-  ns0:hasLastMovieYear 2010 ;
-  ns0:hasName "Vinicius del Toro"^^xsd:string .
