@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "schema": "http://schema.org/",
+    "hasName": "schema:hasName",
+    "hasGender": "schema:hasGender"
+  },
+  "@id": "http://example.org/participant/1",
+  "@type": "schema:Participant",
+  "hasName": "Alice Johnson",
+  "hasGender": "female"
+}
