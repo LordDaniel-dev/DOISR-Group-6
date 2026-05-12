@@ -1,0 +1,224 @@
+@prefix : <http://example.org/> .
+@prefix schema: <http://schema.org/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+:ParticipantShape
+ a sh:NodeShape ;
+ sh:targetClass schema:Participant ;
+ sh:property [
+ sh:path schema:hasName ;
+ sh:datatype xsd:string ;
+ ] ;
+ sh:property [
+ sh:path schema:hasGender ;
+ sh:in ( "female" "male" "other") ;
+ ] .
+
+:ActorShape a sh:NodeShape ;
+  sh:targetClass :Actor ;
+  sh:property [
+    sh:path :actsIn ;
+    sh:minCount 1 ;
+  ] .
+
+:DirectorShape a sh:NodeShape ;
+  sh:targetClass :Director ;
+  sh:property [
+    sh:path :hasFirstMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasLastMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasFirstMovieYear ;
+    sh:lessThan :hasLastMovieYear ;
+  ] ;
+  sh:property [
+    sh:path :hasMaleCount ;
+    sh:minCount 0 ;
+    sh:maxCount 4 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasFemaleCount ;
+    sh:minCount 0 ;
+    sh:maxCount 4 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasActorCredits ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] ;
+  sh:property [
+    sh:path :hasActressCredits ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] .
+
+:ProducerShape a sh:NodeShape ;
+  sh:targetClass :Producer ;
+  sh:property [
+    sh:path :hasFirstMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasLastMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasFirstMovieYear ;
+    sh:lessThan :hasLastMovieYear ;
+  ] ;
+  sh:property [
+    sh:path :hasMaleCount ;
+    sh:minCount 0 ;
+    sh:maxCount 4 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasFemaleCount ;
+    sh:minCount 0 ;
+    sh:maxCount 4 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasActorCredits ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] ;
+  sh:property [
+    sh:path :hasActressCredits ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] ;
+sh:property [
+    sh:path :hasFirstProducerMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasFirstExecutiveMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+sh:property [
+    sh:path :hasFirstAssociateMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasLastAssociateMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+sh:property [
+    sh:path :hasLastProducerMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] ;
+  sh:property [
+    sh:path :hasLastExecutiveMovieYear ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:integer ;
+  ] .
+
+
+:MovieShape a sh:NodeShape ;
+  sh:targetClass :Movie ;
+  sh:property [
+    sh:path :hasTitle ;
+    sh:minCount 1 ;
+    sh:datatype xsd:string ;
+    sh:minLength 1 ;
+  ] ;
+  sh:property [
+    sh:path :hasReleaseYear ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1888 ;
+  ] ;
+  sh:property [
+    sh:path :hasBudget ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+  ] ;
+  sh:property [
+    sh:path :genderPercent ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 100 ;
+  ] ;
+  sh:property [
+  sh:path schema:genre ;
+  sh:in ( "Action" "Adventure" "Comedy" "Drama" "Fantasy" "Horror" "Science Fiction") ;
+  ] .
+
+:RatingShape a sh:NodeShape ;
+  sh:targetClass :Rating ;
+  sh:property [
+    sh:path :hasRatingValue ;
+    sh:minCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 10 ;
+  ] ;
+  sh:property [
+    sh:path :hasNumVotes ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 5 ;
+  ] .
+
+:CeremonyShape a sh:NodeShape ;
+  sh:targetClass :Ceremony ;
+  sh:closed true ;
+  sh:ignoredProperties ( rdf:type ) ;
+  sh:property [
+    sh:path :hasCeremonyNumber ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1 ;
+  ] ;
+  sh:property [
+    sh:path :hasYearCelebrated ;
+    sh:minCount 1 ;
+    sh:datatype xsd:integer ;
+    sh:minInclusive 1929 ;
+  ] .
+
+:NomineeShape a sh:NodeShape ;
+  sh:targetClass :Nominee ;
+  sh:property [
+    sh:path :isWinner ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:boolean ;
+  ] ;
+  sh:property [
+    sh:path schema:category ;
+    sh:in ("Best Picture" "Best Director" "Best Actor" "Best Actress" "Best Cinematography" "Best Production Design" "Best Adapted Screenplay" "Best Sound" "Best Animated Short Film" "Best Live Action Short Film" "Best Film Editing" "Best Original Score" "Best Original Song" "Best Supporting Actor" "Best Supporting Actress" "Best Visual Effects" 	"Best Original Screenplay" "Best Documentary Short Film" "Best Documentary Feature Film" "Best International Feature Film" "Best Costume Design" "Best Makeup and Hairstyling" "Best Animated Feature Film" "Best Casting") ;
+  ] .
