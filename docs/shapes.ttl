@@ -1,0 +1,280 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix schema: <https://schema.org/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix dsix: <https://w3id.org/doisr/Group6#> .
+@prefix : <https://w3id.org/doisr/Group6#> .
+
+dsix:ParticipantShape a sh:NodeShape ;
+    sh:targetClass dsix:Participant ;
+
+    sh:property [
+        sh:path dsix:hasGender ;
+        sh:in ( "female" "male" ) ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasNomination ;
+      sh:node dsix:NominationShape ;
+    ] ;
+
+    sh:property [
+        sh:path schema:name ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:minLength 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasMaleCount ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:maxCount 4 ; # Es 4 porque es he/him/his/himself
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasFemaleCount ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:maxCount 4 ; # Es 4 porque es she/her/hers/herself
+    ] ;
+
+    sh:property [
+      sh:path :hasActorCredits ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:datatype xsd:boolean ;
+    ] ;
+
+    sh:property [
+      sh:path :hasActressCredits ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+      sh:datatype xsd:boolean ;
+    ] .
+
+dsix:ParticipationShape
+    a sh:NodeShape ;
+    sh:targetClass dsix:Participation ;
+
+    sh:property [
+        sh:path dsix:hasParticipant ;
+        sh:node dsix:ParticipantShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:participatesIn ;
+        sh:node dsix:MovieShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasRole ;
+        sh:in ( "Actor" "Director" "Producer" ) ;
+        sh:minCount 1 ;
+    ] .
+
+dsix:MovieShape
+    a sh:NodeShape ;
+    sh:targetClass dsix:Movie ;
+
+    sh:property [
+        sh:path dct:title ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasReleaseYear ;
+        sh:datatype xsd:gYear ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasBudget ;
+        sh:datatype xsd:decimal ;
+        sh:minInclusive 0 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasGenderPercent ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:maxInclusive 100 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasGenre ;
+        sh:datatype xsd:string ;
+        sh:in (
+            "Action"
+            "Adult"
+            "Adventure"
+            "Animation"
+            "Biography"
+            "Comedy"
+            "Crime"
+            "Documentary"
+            "Drama"
+            "Family"
+            "Fantasy"
+            "Film-Noir"
+            "History"
+            "Horror"
+            "Music"
+            "Musical"
+            "Mystery"
+            "Romance"
+            "Sci-Fi"
+            "Short"
+            "Sport"
+            "Thriller"
+            "War"
+            "Western"
+        ) ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasRating ;
+        sh:node dsix:Rating ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasNomination ;
+      sh:node dsix:NominationShape ;
+    ] .
+
+dsix:RatingShape
+    a sh:NodeShape ;
+    sh:targetClass dsix:Rating ;
+
+    sh:property [
+        sh:path dsix:numVotes ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 0 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasRatingValue ;
+      sh:datatype xsd:integer ;
+      sh:minInclusive 0 ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:isRating ;
+      sh:node dsix:Movie;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ] .
+
+dsix:NominationShape
+    a sh:NodeShape ;
+    sh:targetClass dsix:Nomination ;
+
+    sh:property [
+      sh:path dsix:isWinner ;
+      sh:datatype xsd:boolean ;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasCeremony ;
+      sh:node dsix:Ceremony;
+      sh:minCount 1 ;
+      sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasNominatedParticipant ;
+      sh:node dsix:Participant;
+      sh:minCount 0 ;
+      sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasNominatedMovie ;
+      sh:node dsix:Movie;
+      sh:minCount 0 ;
+      sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path schema:hasCategory ;
+      sh:in ("ACTOR"
+              "ACTRESS"
+              "ANIMATED FEATURE FILM"
+              "ASSISTANT DIRECTOR"
+              "AWARD OF COMMENDATION"
+              "BEST DIRECTOR"
+              "BEST PICTURE"
+              "CINEMATOGRAPHY"
+              "COSTUME DESIGN"
+              "DANCE DIRECTION"
+              "DIRECTING"
+              "DOCUMENTARY"
+              "ENGINEERING EFFECTS"
+              "FILM EDITING"
+              "GORDON E. SAWYER AWARD"
+              "HONORARY AWARD"
+              "INTERNATIONAL FEATURE FILM"
+              "IRVING G. THALBERG MEMORIAL AWARD"
+              "JEAN HERSHOLT HUMANITARIAN AWARD"
+              "LIVE-ACTION SHORT FILM"
+              "MAKEUP"
+              "MUSIC"
+              "PRODUCTION DESIGN"
+              "SHORT FILM"
+              "SOUND"
+              "SPECIAL ACHIEVEMENT AWARD (Visual Effects)"
+              "SPECIAL AWARD"
+              "UNIQUE AND ARTISTIC PICTURE"
+              "VISUAL EFFECTS"
+              "WRITING")
+      ] .
+
+dsix:CeremonyShape
+    a sh:NodeShape ;
+    sh:targetClass dsix:Ceremony ;
+
+    sh:property [
+        sh:path dsix:hasYearCelebrated ;
+        sh:datatype xsd:gYear ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path dsix:hasCeremonyNumber ;
+        sh:datatype xsd:integer ;
+        sh:minInclusive 1 ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+      sh:path dsix:hasNomination ;
+      sh:node dsix:Nomination;
+      sh:minCount 1 ;
+    ] .
