@@ -1,0 +1,577 @@
+@prefix : <https://w3id.org/doisr/Group6#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix mod: <https://w3id.org/mod#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dsix: <https://w3id.org/doisr/Group6#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix schema: <https://schema.org/> .
+@base <https://w3id.org/doisr/Group6#> .
+
+<https://w3id.org/doisr/Group6> rdf:type owl:Ontology ;
+                                 owl:versionIRI <https://w3id.org/doisr/Group6/2.0.0> ;
+                                 dct:bibliographicCitation "Grupo 6. Ontología de cine. 2026." ;
+                                 dct:contributor "Alejandro de Hermenegildo" ,
+                                                 "Daniel Jimenez" ,
+                                                 "Daniel Martin" ,
+                                                 "Santiago Rodriguez" ;
+                                 dct:created "2026-04-20"^^xsd:date ;
+                                 dct:creator "DOISR Group 6" ;
+                                 dct:description "Ontology for representing movies, actors, directors, and Oscar nominations."@en ;
+                                 dct:issued "2026-05-18"^^xsd:date ;
+                                 dct:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                 dct:modified "2026-05-07"^^xsd:date ;
+                                 dct:publisher "DOISR Group 6" ;
+                                 dct:source <https://figshare.com/articles/dataset/U_S_movies_with_gender-disambiguated_actors_directors_and_producers/4967876> ;
+                                 vann:preferredNamespacePrefix "dsix" ;
+                                 vann:preferredNamespaceUri "https://w3id.org/doisr/Group6#" ;
+                                 rdfs:label "IMDb Movie Ontology"@en ;
+                                 rdfs:seeAlso <https://www.imdb.com/> ;
+                                 owl:versionInfo "2.0.0" ;
+                                 schema:codeRepository <https://github.com/LordDaniel-dev/DOISR-Group-6> ;
+                                 mod:createdWith <https://chowlk.linkeddata.es/> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/bibliographicCitation
+dct:bibliographicCitation rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/contributor
+dct:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+dct:created rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+dct:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dct:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+dct:issued rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dct:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+dct:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+dct:publisher rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/source
+dct:source rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+vann:preferredNamespaceUri rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/codeRepository
+schema:codeRepository rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/mod#createdWith
+mod:createdWith rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+###  http://www.w3.org/2001/XMLSchema#gYear
+xsd:gYear rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://w3id.org/doisr/Group6#hasCategory
+dsix:hasCategory rdf:type owl:ObjectProperty ;
+                 rdfs:domain dsix:Nomination ;
+                 rdfs:range dsix:AwardCategory ;
+                 rdfs:label "has category"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasCeremony
+dsix:hasCeremony rdf:type owl:ObjectProperty ;
+                 owl:inverseOf dsix:hasNomination ;
+                 rdfs:domain dsix:Nomination ;
+                 rdfs:range dsix:Ceremony ;
+                 rdfs:label "has ceremony"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasGender
+dsix:hasGender rdf:type owl:ObjectProperty ;
+               rdfs:domain dsix:Participant ;
+               rdfs:range dsix:Gender ;
+               rdfs:label "has gender"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasGenre
+dsix:hasGenre rdf:type owl:ObjectProperty ;
+              rdfs:domain dsix:Movie ;
+              rdfs:range dsix:Genre ;
+              rdfs:label "has genre"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasNominatedMovie
+dsix:hasNominatedMovie rdf:type owl:ObjectProperty ;
+                       rdfs:domain dsix:Nomination ;
+                       rdfs:range dsix:Movie ;
+                       rdfs:label "has nominated movie"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasNominatedParticipant
+dsix:hasNominatedParticipant rdf:type owl:ObjectProperty ;
+                             owl:inverseOf dsix:hasNominationParticipant ;
+                             rdfs:domain dsix:Nomination ;
+                             rdfs:range dsix:Participant ;
+                             rdfs:label "has nominated participant"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasNomination
+dsix:hasNomination rdf:type owl:ObjectProperty ;
+                   rdfs:domain dsix:Ceremony ;
+                   rdfs:range dsix:Nomination ;
+                   rdfs:label "has nomination"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasNominationParticipant
+dsix:hasNominationParticipant rdf:type owl:ObjectProperty ;
+                              rdfs:domain dsix:Participant ;
+                              rdfs:range dsix:Nomination ;
+                              rdfs:label "has nomination participant"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasParticipant
+dsix:hasParticipant rdf:type owl:ObjectProperty ;
+                    rdfs:domain dsix:Participation ;
+                    rdfs:range dsix:Participant ;
+                    rdfs:label "has participant"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasRating
+dsix:hasRating rdf:type owl:ObjectProperty ;
+               owl:inverseOf dsix:isRating ;
+               rdfs:domain dsix:Movie ;
+               rdfs:range dsix:Rating ;
+               rdfs:label "has rating"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasRole
+dsix:hasRole rdf:type owl:ObjectProperty ;
+             rdfs:domain dsix:Participation ;
+             rdfs:range dsix:Role ;
+             rdfs:label "has role"@en .
+
+
+###  https://w3id.org/doisr/Group6#isRating
+dsix:isRating rdf:type owl:ObjectProperty ;
+              rdfs:domain dsix:Rating ;
+              rdfs:range dsix:Movie ;
+              rdfs:label "is rating"@en .
+
+
+###  https://w3id.org/doisr/Group6#participatesIn
+dsix:participatesIn rdf:type owl:ObjectProperty ;
+                    rdfs:domain dsix:Participation ;
+                    rdfs:range dsix:Movie ;
+                    rdfs:label "participates in"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/dc/terms/title
+dct:title rdf:type owl:DatatypeProperty ;
+          rdfs:domain dsix:Movie ;
+          rdfs:range xsd:string ;
+          rdfs:label "title"@en .
+
+
+###  http://xmlns.com/foaf/0.1/name
+foaf:name rdf:type owl:DatatypeProperty ;
+          rdfs:domain dsix:Participant ;
+          rdfs:range xsd:string ;
+          rdfs:label "name"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasActorCredits
+dsix:hasActorCredits rdf:type owl:DatatypeProperty ;
+                     rdfs:domain dsix:Participant ;
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "has actor credits"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasActressCredits
+dsix:hasActressCredits rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dsix:Participant ;
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "has actress credits"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasBudget
+dsix:hasBudget rdf:type owl:DatatypeProperty ;
+               rdfs:domain dsix:Movie ;
+               rdfs:range xsd:decimal ;
+               rdfs:label "has budget"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasCeremonyNumber
+dsix:hasCeremonyNumber rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dsix:Ceremony ;
+                       rdfs:range xsd:integer ;
+                       rdfs:label "has ceremony number"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasFemaleCount
+dsix:hasFemaleCount rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dsix:Participant ;
+                    rdfs:range xsd:integer ;
+                    rdfs:label "has female count"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasGenderPercent
+dsix:hasGenderPercent rdf:type owl:DatatypeProperty ;
+                      rdfs:domain dsix:Movie ;
+                      rdfs:range xsd:integer ;
+                      rdfs:label "has gender percent"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasId
+dsix:hasId rdf:type owl:DatatypeProperty ;
+           rdfs:domain dsix:Participant ;
+           rdfs:range xsd:integer ;
+           rdfs:label "has id"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasMaleCount
+dsix:hasMaleCount rdf:type owl:DatatypeProperty ;
+                  rdfs:domain dsix:Participant ;
+                  rdfs:range xsd:integer ;
+                  rdfs:label "has male count"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasNumVotes
+dsix:hasNumVotes rdf:type owl:DatatypeProperty ;
+                 rdfs:domain dsix:Rating ;
+                 rdfs:range xsd:integer ;
+                 rdfs:label "has num votes"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasRatingValue
+dsix:hasRatingValue rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dsix:Rating ;
+                    rdfs:range xsd:decimal ;
+                    rdfs:label "has rating value"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasReleaseYear
+dsix:hasReleaseYear rdf:type owl:DatatypeProperty ;
+                    rdfs:domain dsix:Movie ;
+                    rdfs:range xsd:gYear ;
+                    rdfs:label "has release year"@en .
+
+
+###  https://w3id.org/doisr/Group6#hasYearCelebrated
+dsix:hasYearCelebrated rdf:type owl:DatatypeProperty ;
+                       rdfs:domain dsix:Ceremony ;
+                       rdfs:range xsd:gYear ;
+                       rdfs:label "has year celebrated"@en .
+
+
+###  https://w3id.org/doisr/Group6#isWinner
+dsix:isWinner rdf:type owl:DatatypeProperty ;
+              rdfs:domain dsix:Nomination ;
+              rdfs:range xsd:boolean ;
+              rdfs:label "is winner"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
+
+###  https://schema.org/Event
+schema:Event rdf:type owl:Class .
+
+
+###  https://schema.org/Movie
+schema:Movie rdf:type owl:Class .
+
+
+###  https://schema.org/Rating
+schema:Rating rdf:type owl:Class .
+
+
+###  https://w3id.org/doisr/Group6#AwardCategory
+dsix:AwardCategory rdf:type owl:Class ;
+                   rdfs:subClassOf skos:ConceptScheme ;
+                   rdfs:label "Award Category"@en .
+
+
+###  https://w3id.org/doisr/Group6#Ceremony
+dsix:Ceremony rdf:type owl:Class ;
+              rdfs:subClassOf schema:Event ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dsix:hasNomination ;
+                                owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass dsix:Nomination
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dsix:hasCeremonyNumber ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:integer
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty dsix:hasYearCelebrated ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onDataRange xsd:gYear
+                              ] ;
+              rdfs:label "Ceremony"@en .
+
+
+###  https://w3id.org/doisr/Group6#Gender
+dsix:Gender rdf:type owl:Class ;
+            rdfs:subClassOf skos:ConceptScheme ;
+            rdfs:label "Gender"@en .
+
+
+###  https://w3id.org/doisr/Group6#Genre
+dsix:Genre rdf:type owl:Class ;
+           rdfs:subClassOf skos:ConceptScheme ;
+           rdfs:label "Genre"@en .
+
+
+###  https://w3id.org/doisr/Group6#Movie
+dsix:Movie rdf:type owl:Class ;
+           rdfs:subClassOf schema:Movie ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dct:title ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dsix:hasBudget ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:decimal
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dsix:hasGenderPercent ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:integer
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty dsix:hasReleaseYear ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:gYear
+                           ] ;
+           rdfs:label "Movie"@en .
+
+
+###  https://w3id.org/doisr/Group6#Nomination
+dsix:Nomination rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty dsix:hasCategory ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass dsix:AwardCategory
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dsix:hasCeremony ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass dsix:Ceremony
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dsix:hasNominatedMovie ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass dsix:Movie
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dsix:hasNominatedParticipant ;
+                                  owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass dsix:Participant
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty dsix:isWinner ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onDataRange xsd:boolean
+                                ] ;
+                rdfs:label "Nomination"@en .
+
+
+###  https://w3id.org/doisr/Group6#Participant
+dsix:Participant rdf:type owl:Class ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty foaf:name ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:string
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dsix:hasId ;
+                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dsix:hasActorCredits ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:boolean
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dsix:hasActressCredits ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:boolean
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dsix:hasFemaleCount ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ,
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty dsix:hasMaleCount ;
+                                   owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                   owl:onDataRange xsd:integer
+                                 ] ;
+                 rdfs:label "Participant"@en .
+
+
+###  https://w3id.org/doisr/Group6#Participation
+dsix:Participation rdf:type owl:Class ;
+                   rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                     owl:onProperty dsix:hasRole ;
+                                     owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass dsix:Role
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dsix:hasParticipant ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass dsix:Participant
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty dsix:participatesIn ;
+                                     owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                     owl:onClass dsix:Movie
+                                   ] ;
+                   rdfs:label "Participation"@en .
+
+
+###  https://w3id.org/doisr/Group6#Rating
+dsix:Rating rdf:type owl:Class ;
+            rdfs:subClassOf schema:Rating ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dsix:isRating ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass dsix:Movie
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dsix:hasNumVotes ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:integer
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty dsix:hasRatingValue ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange xsd:decimal
+                            ] ;
+            rdfs:label "Rating"@en .
+
+
+###  https://w3id.org/doisr/Group6#Role
+dsix:Role rdf:type owl:Class ;
+          rdfs:subClassOf skos:ConceptScheme ;
+          rdfs:label "Role"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://w3id.org/doisr/Group6
+<https://w3id.org/doisr/Group6> rdf:type owl:NamedIndividual ;
+                                dct:title "IMDb Movie Ontology"@en .
+
+
+###  https://w3id.org/doisr/Group6#Actor
+dsix:Actor rdf:type owl:NamedIndividual ,
+                    skos:Concept ;
+           rdfs:label "Actor"@en ;
+           skos:inScheme dsix:Role .
+
+
+###  https://w3id.org/doisr/Group6#Director
+dsix:Director rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Director"@en ;
+              skos:inScheme dsix:Role .
+
+
+###  https://w3id.org/doisr/Group6#Producer
+dsix:Producer rdf:type owl:NamedIndividual ,
+                       skos:Concept ;
+              rdfs:label "Producer"@en ;
+              skos:inScheme dsix:Role .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dsix:AwardCategory
+                dsix:Gender
+                dsix:Genre
+                dsix:Role
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( dsix:Ceremony
+                dsix:Movie
+                dsix:Nomination
+                dsix:Participant
+                dsix:Participation
+                dsix:Rating
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
