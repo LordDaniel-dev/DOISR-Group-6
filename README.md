@@ -71,9 +71,11 @@ This project demonstrates the application of FAIR data principles:
 
 ---
 
-## ⚠️ AI-Generated Content Disclaimer
+## AI-Generated Content Disclaimer
 
-**This README.md file has been generated with the assistance of AI (GitHub Copilot).** While the content is based on the actual repository structure and files, it should be reviewed and validated by the project maintainers to ensure accuracy and completeness. The AI-generated summary provides an overview of the project structure and contents but may not capture all nuances or specific requirements of the DOISR course project. Please refer to the original documentation and source files for authoritative information.
+**This README.md file has been generated with the assistance of AI. The content is based on the actual repository structure and files. The AI-generated summary provides an overview of the project structure and contents but may not capture all nuances or specific requirements of the DOISR course project. Please refer to the original documentation and source files for authoritative information.
+
+Furthermore, other AI features were used during the development of this task and its milestones. Their main function was to provide support when we encountered a roadblock that exceeded our knowledge and we couldn't find the necessary information to continue. The results returned by the AI ​​were validated and, above all, analyzed to try to understand them before using them.
 
 ---
 
