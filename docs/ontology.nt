@@ -1,0 +1,548 @@
+<https://w3id.org/doisr/Group6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/doisr/Group6> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/doisr/Group6/2.0.0> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/bibliographicCitation> "Grupo 6. Ontología de cine. 2026." .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/contributor> "Alejandro de Hermenegildo" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/contributor> "Daniel Jimenez" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/contributor> "Daniel Martin" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/contributor> "Santiago Rodriguez" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/created> "2026-04-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/creator> "DOISR Group 6" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/description> "Ontology for representing movies, actors, directors, and Oscar nominations."@en .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/issued> "2026-05-18"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/modified> "2026-05-07"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/publisher> "DOISR Group 6" .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/source> <https://figshare.com/articles/dataset/U_S_movies_with_gender-disambiguated_actors_directors_and_producers/4967876> .
+<https://w3id.org/doisr/Group6> <http://purl.org/vocab/vann/preferredNamespacePrefix> "dsix" .
+<https://w3id.org/doisr/Group6> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/doisr/Group6#" .
+<https://w3id.org/doisr/Group6> <http://www.w3.org/2000/01/rdf-schema#label> "IMDb Movie Ontology"@en .
+<https://w3id.org/doisr/Group6> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.imdb.com/> .
+<https://w3id.org/doisr/Group6> <http://www.w3.org/2002/07/owl#versionInfo> "2.0.0" .
+<https://w3id.org/doisr/Group6> <https://schema.org/codeRepository> <https://github.com/LordDaniel-dev/DOISR-Group-6> .
+<https://w3id.org/doisr/Group6> <https://w3id.org/mod#createdWith> <https://chowlk.linkeddata.es/> .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://www.w3.org/2004/02/skos/core#inScheme
+<http://www.w3.org/2004/02/skos/core#inScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://schema.org/codeRepository
+<https://schema.org/codeRepository> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# https://w3id.org/mod#createdWith
+<https://w3id.org/mod#createdWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# http://www.w3.org/2001/XMLSchema#gYear
+<http://www.w3.org/2001/XMLSchema#gYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/doisr/Group6#hasCategory
+<https://w3id.org/doisr/Group6#hasCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasCategory> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasCategory> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#AwardCategory> .
+<https://w3id.org/doisr/Group6#hasCategory> <http://www.w3.org/2000/01/rdf-schema#label> "has category"@en .
+# 
+# https://w3id.org/doisr/Group6#hasCeremony
+<https://w3id.org/doisr/Group6#hasCeremony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasCeremony> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/doisr/Group6#hasNomination> .
+<https://w3id.org/doisr/Group6#hasCeremony> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasCeremony> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Ceremony> .
+<https://w3id.org/doisr/Group6#hasCeremony> <http://www.w3.org/2000/01/rdf-schema#label> "has ceremony"@en .
+# 
+# https://w3id.org/doisr/Group6#hasGender
+<https://w3id.org/doisr/Group6#hasGender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasGender> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasGender> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Gender> .
+<https://w3id.org/doisr/Group6#hasGender> <http://www.w3.org/2000/01/rdf-schema#label> "has gender"@en .
+# 
+# https://w3id.org/doisr/Group6#hasGenre
+<https://w3id.org/doisr/Group6#hasGenre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasGenre> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasGenre> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Genre> .
+<https://w3id.org/doisr/Group6#hasGenre> <http://www.w3.org/2000/01/rdf-schema#label> "has genre"@en .
+# 
+# https://w3id.org/doisr/Group6#hasNominatedMovie
+<https://w3id.org/doisr/Group6#hasNominatedMovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasNominatedMovie> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasNominatedMovie> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasNominatedMovie> <http://www.w3.org/2000/01/rdf-schema#label> "has nominated movie"@en .
+# 
+# https://w3id.org/doisr/Group6#hasNominatedParticipant
+<https://w3id.org/doisr/Group6#hasNominatedParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasNominatedParticipant> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/doisr/Group6#hasNominationParticipant> .
+<https://w3id.org/doisr/Group6#hasNominatedParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasNominatedParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasNominatedParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has nominated participant"@en .
+# 
+# https://w3id.org/doisr/Group6#hasNomination
+<https://w3id.org/doisr/Group6#hasNomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasNomination> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Ceremony> .
+<https://w3id.org/doisr/Group6#hasNomination> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasNomination> <http://www.w3.org/2000/01/rdf-schema#label> "has nomination"@en .
+# 
+# https://w3id.org/doisr/Group6#hasNominationParticipant
+<https://w3id.org/doisr/Group6#hasNominationParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasNominationParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasNominationParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#hasNominationParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has nomination participant"@en .
+# 
+# https://w3id.org/doisr/Group6#hasParticipant
+<https://w3id.org/doisr/Group6#hasParticipant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participation> .
+<https://w3id.org/doisr/Group6#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasParticipant> <http://www.w3.org/2000/01/rdf-schema#label> "has participant"@en .
+# 
+# https://w3id.org/doisr/Group6#hasRating
+<https://w3id.org/doisr/Group6#hasRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasRating> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/doisr/Group6#isRating> .
+<https://w3id.org/doisr/Group6#hasRating> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasRating> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Rating> .
+<https://w3id.org/doisr/Group6#hasRating> <http://www.w3.org/2000/01/rdf-schema#label> "has rating"@en .
+# 
+# https://w3id.org/doisr/Group6#hasRole
+<https://w3id.org/doisr/Group6#hasRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#hasRole> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participation> .
+<https://w3id.org/doisr/Group6#hasRole> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Role> .
+<https://w3id.org/doisr/Group6#hasRole> <http://www.w3.org/2000/01/rdf-schema#label> "has role"@en .
+# 
+# https://w3id.org/doisr/Group6#isRating
+<https://w3id.org/doisr/Group6#isRating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#isRating> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Rating> .
+<https://w3id.org/doisr/Group6#isRating> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#isRating> <http://www.w3.org/2000/01/rdf-schema#label> "is rating"@en .
+# 
+# https://w3id.org/doisr/Group6#participatesIn
+<https://w3id.org/doisr/Group6#participatesIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/doisr/Group6#participatesIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participation> .
+<https://w3id.org/doisr/Group6#participatesIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#participatesIn> <http://www.w3.org/2000/01/rdf-schema#label> "participates in"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title"@en .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
+# 
+# https://w3id.org/doisr/Group6#hasActorCredits
+<https://w3id.org/doisr/Group6#hasActorCredits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasActorCredits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasActorCredits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#hasActorCredits> <http://www.w3.org/2000/01/rdf-schema#label> "has actor credits"@en .
+# 
+# https://w3id.org/doisr/Group6#hasActressCredits
+<https://w3id.org/doisr/Group6#hasActressCredits> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasActressCredits> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasActressCredits> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#hasActressCredits> <http://www.w3.org/2000/01/rdf-schema#label> "has actress credits"@en .
+# 
+# https://w3id.org/doisr/Group6#hasBudget
+<https://w3id.org/doisr/Group6#hasBudget> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasBudget> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasBudget> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/doisr/Group6#hasBudget> <http://www.w3.org/2000/01/rdf-schema#label> "has budget"@en .
+# 
+# https://w3id.org/doisr/Group6#hasCeremonyNumber
+<https://w3id.org/doisr/Group6#hasCeremonyNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasCeremonyNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Ceremony> .
+<https://w3id.org/doisr/Group6#hasCeremonyNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasCeremonyNumber> <http://www.w3.org/2000/01/rdf-schema#label> "has ceremony number"@en .
+# 
+# https://w3id.org/doisr/Group6#hasFemaleCount
+<https://w3id.org/doisr/Group6#hasFemaleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasFemaleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasFemaleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasFemaleCount> <http://www.w3.org/2000/01/rdf-schema#label> "has female count"@en .
+# 
+# https://w3id.org/doisr/Group6#hasGenderPercent
+<https://w3id.org/doisr/Group6#hasGenderPercent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasGenderPercent> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasGenderPercent> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasGenderPercent> <http://www.w3.org/2000/01/rdf-schema#label> "has gender percent"@en .
+# 
+# https://w3id.org/doisr/Group6#hasId
+<https://w3id.org/doisr/Group6#hasId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasId> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasId> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasId> <http://www.w3.org/2000/01/rdf-schema#label> "has id"@en .
+# 
+# https://w3id.org/doisr/Group6#hasMaleCount
+<https://w3id.org/doisr/Group6#hasMaleCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasMaleCount> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#hasMaleCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasMaleCount> <http://www.w3.org/2000/01/rdf-schema#label> "has male count"@en .
+# 
+# https://w3id.org/doisr/Group6#hasNumVotes
+<https://w3id.org/doisr/Group6#hasNumVotes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasNumVotes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Rating> .
+<https://w3id.org/doisr/Group6#hasNumVotes> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#hasNumVotes> <http://www.w3.org/2000/01/rdf-schema#label> "has num votes"@en .
+# 
+# https://w3id.org/doisr/Group6#hasRatingValue
+<https://w3id.org/doisr/Group6#hasRatingValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasRatingValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Rating> .
+<https://w3id.org/doisr/Group6#hasRatingValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/doisr/Group6#hasRatingValue> <http://www.w3.org/2000/01/rdf-schema#label> "has rating value"@en .
+# 
+# https://w3id.org/doisr/Group6#hasReleaseYear
+<https://w3id.org/doisr/Group6#hasReleaseYear> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasReleaseYear> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#hasReleaseYear> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/doisr/Group6#hasReleaseYear> <http://www.w3.org/2000/01/rdf-schema#label> "has release year"@en .
+# 
+# https://w3id.org/doisr/Group6#hasYearCelebrated
+<https://w3id.org/doisr/Group6#hasYearCelebrated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#hasYearCelebrated> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Ceremony> .
+<https://w3id.org/doisr/Group6#hasYearCelebrated> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/doisr/Group6#hasYearCelebrated> <http://www.w3.org/2000/01/rdf-schema#label> "has year celebrated"@en .
+# 
+# https://w3id.org/doisr/Group6#isWinner
+<https://w3id.org/doisr/Group6#isWinner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/doisr/Group6#isWinner> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#isWinner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#isWinner> <http://www.w3.org/2000/01/rdf-schema#label> "is winner"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2004/02/skos/core#Concept
+<http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# http://www.w3.org/2004/02/skos/core#ConceptScheme
+<http://www.w3.org/2004/02/skos/core#ConceptScheme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Event
+<https://schema.org/Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Movie
+<https://schema.org/Movie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://schema.org/Rating
+<https://schema.org/Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+# 
+# https://w3id.org/doisr/Group6#AwardCategory
+<https://w3id.org/doisr/Group6#AwardCategory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#AwardCategory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/doisr/Group6#AwardCategory> <http://www.w3.org/2000/01/rdf-schema#label> "Award Category"@en .
+# 
+# https://w3id.org/doisr/Group6#Ceremony
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Event> .
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasNomination> .
+_:genid1 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Nomination> .
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasCeremonyNumber> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasYearCelebrated> .
+_:genid3 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid3 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/doisr/Group6#Ceremony> <http://www.w3.org/2000/01/rdf-schema#label> "Ceremony"@en .
+# 
+# https://w3id.org/doisr/Group6#Gender
+<https://w3id.org/doisr/Group6#Gender> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Gender> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/doisr/Group6#Gender> <http://www.w3.org/2000/01/rdf-schema#label> "Gender"@en .
+# 
+# https://w3id.org/doisr/Group6#Genre
+<https://w3id.org/doisr/Group6#Genre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Genre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/doisr/Group6#Genre> <http://www.w3.org/2000/01/rdf-schema#label> "Genre"@en .
+# 
+# https://w3id.org/doisr/Group6#Movie
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Movie> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/dc/terms/title> .
+_:genid4 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasBudget> .
+_:genid5 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasGenderPercent> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasReleaseYear> .
+_:genid7 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/doisr/Group6#Movie> <http://www.w3.org/2000/01/rdf-schema#label> "Movie"@en .
+# 
+# https://w3id.org/doisr/Group6#Nomination
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasCategory> .
+_:genid8 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid8 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#AwardCategory> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasCeremony> .
+_:genid9 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Ceremony> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasNominatedMovie> .
+_:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasNominatedParticipant> .
+_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid11 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#isWinner> .
+_:genid12 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#Nomination> <http://www.w3.org/2000/01/rdf-schema#label> "Nomination"@en .
+# 
+# https://w3id.org/doisr/Group6#Participant
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://xmlns.com/foaf/0.1/name> .
+_:genid13 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasId> .
+_:genid14 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid14 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasActorCredits> .
+_:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasActressCredits> .
+_:genid16 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid16 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#boolean> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasFemaleCount> .
+_:genid17 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid17 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasMaleCount> .
+_:genid18 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid18 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Participant> <http://www.w3.org/2000/01/rdf-schema#label> "Participant"@en .
+# 
+# https://w3id.org/doisr/Group6#Participation
+<https://w3id.org/doisr/Group6#Participation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Participation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasRole> .
+_:genid19 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid19 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Role> .
+<https://w3id.org/doisr/Group6#Participation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasParticipant> .
+_:genid20 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid20 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Participant> .
+<https://w3id.org/doisr/Group6#Participation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#participatesIn> .
+_:genid21 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid21 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#Participation> <http://www.w3.org/2000/01/rdf-schema#label> "Participation"@en .
+# 
+# https://w3id.org/doisr/Group6#Rating
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://schema.org/Rating> .
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#isRating> .
+_:genid22 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid22 <http://www.w3.org/2002/07/owl#onClass> <https://w3id.org/doisr/Group6#Movie> .
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasNumVotes> .
+_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/doisr/Group6#hasRatingValue> .
+_:genid24 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid24 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/doisr/Group6#Rating> <http://www.w3.org/2000/01/rdf-schema#label> "Rating"@en .
+# 
+# https://w3id.org/doisr/Group6#Role
+<https://w3id.org/doisr/Group6#Role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/doisr/Group6#Role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<https://w3id.org/doisr/Group6#Role> <http://www.w3.org/2000/01/rdf-schema#label> "Role"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/doisr/Group6
+<https://w3id.org/doisr/Group6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/Group6> <http://purl.org/dc/terms/title> "IMDb Movie Ontology"@en .
+# 
+# https://w3id.org/doisr/Group6#Actor
+<https://w3id.org/doisr/Group6#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/Group6#Actor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/Group6#Actor> <http://www.w3.org/2000/01/rdf-schema#label> "Actor"@en .
+<https://w3id.org/doisr/Group6#Actor> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/Group6#Role> .
+# 
+# https://w3id.org/doisr/Group6#Director
+<https://w3id.org/doisr/Group6#Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/Group6#Director> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/Group6#Director> <http://www.w3.org/2000/01/rdf-schema#label> "Director"@en .
+<https://w3id.org/doisr/Group6#Director> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/Group6#Role> .
+# 
+# https://w3id.org/doisr/Group6#Producer
+<https://w3id.org/doisr/Group6#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/doisr/Group6#Producer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<https://w3id.org/doisr/Group6#Producer> <http://www.w3.org/2000/01/rdf-schema#label> "Producer"@en .
+<https://w3id.org/doisr/Group6#Producer> <http://www.w3.org/2004/02/skos/core#inScheme> <https://w3id.org/doisr/Group6#Role> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    General axioms
+# #
+# #################################################################
+# 
+# 
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid25 <http://www.w3.org/2002/07/owl#members> _:genid29 .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#AwardCategory> .
+_:genid29 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid28 .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Gender> .
+_:genid28 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Genre> .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Role> .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+_:genid30 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AllDisjointClasses> .
+_:genid30 <http://www.w3.org/2002/07/owl#members> _:genid36 .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Ceremony> .
+_:genid36 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid35 .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Movie> .
+_:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid34 .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Nomination> .
+_:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid33 .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Participant> .
+_:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid32 .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Participation> .
+_:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid31 .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://w3id.org/doisr/Group6#Rating> .
+_:genid31 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
