@@ -1,0 +1,13 @@
+@prefix ns0: <https://w3id.org/doisr/Group6#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://w3id.org/doisr/Group6#director1>
+  a <https://w3id.org/doisr/Group6#Participant> ;
+
+  schema:name "Vinicius del Toro"^^xsd:string ;
+  schema:name "Cristiano Ronaldo"^^xsd:string ;
+
+  ns0:hasGender "male" ;
+  ns0:hasActorCredits true ;
+  ns0:hasActressCredits false .
